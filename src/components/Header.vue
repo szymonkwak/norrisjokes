@@ -1,7 +1,10 @@
 <template>
   <header>
-    <img src="../assets/bandit.png" />
-    <h1>Chuck Norris funny facts</h1>
+    <img src="../assets/bandito.png" />
+    <div>
+      <h1 id="header-line">facts about</h1>
+      <h1>CHUCK NORRIS</h1>
+    </div>
   </header>
 </template>
 
@@ -14,24 +17,38 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 16px;
+  margin: 3rem 16px;
 }
 img {
-  max-width: 100px;
+  max-width: 150px;
   object-fit: contain;
-  margin: 0 16px;
+  margin-right: 24px;
+}
+#header-line {
+  letter-spacing: 0.15em;
 }
 h1 {
-  font-size: 3.5rem;
+  font-family: 'Smokum';
+  letter-spacing: 0.05em;
+  font-size: 5rem;
   margin: 0;
 }
 @media screen and (max-width: 800px) {
-  h1 {
-    font-size: 2.5rem;
+  img {
+    max-width: 110px;
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    flex-direction: column;
     text-align: center;
   }
+  h1 {
+    font-size: 4rem;
+  }
   img {
-    width: 75px;
+    max-width: 80px;
+    margin: 0;
   }
 }
 </style>

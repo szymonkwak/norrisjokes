@@ -1,11 +1,13 @@
 <script>
 import Categories from './components/Categories.vue';
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components: {
     Header,
     Categories,
+    Footer,
   },
   data() {
     return {
@@ -31,16 +33,5 @@ export default {
 <template>
   <Header />
   <Categories :categories="categories" />
+  <Footer />
 </template>
-
-<style>
-* {
-  font-family: 'Source Sans Pro', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-html {
-  color: #fff;
-  background-color: #373d43;
-}
-</style>

@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import './styles/globalStyles.css';
 
 import BalmUI from 'balm-ui'; // Official Google Material Components
 import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
@@ -9,7 +10,7 @@ const app = createApp(App);
 
 app.use(BalmUI, {
   $theme: {
-      primary: '#ffb300',
+    primary: '#222',
   },
 });
 app.use(BalmUIPlus);
