@@ -1,19 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Categories from './components/Categories.vue';
+import Header from './components/Header.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <Header />
+  <Categories />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+* {
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+html {
+  color: #fff;
+  background-color: #373d43;
 }
 </style>
