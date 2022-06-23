@@ -1,11 +1,36 @@
-<script setup>
+<script>
 import Categories from './components/Categories.vue';
 import Header from './components/Header.vue';
+
+export default {
+  components: {
+    Header,
+    Categories,
+  },
+  data() {
+    return {
+      categories: [],
+      modalOpened: true,
+    };
+  },
+
+  mounted() {
+    this.fetchCategories('https://api.chucknorris.io/jokes/categories');
+  },
+
+  methods: {
+    async fetchCategories(url) {
+      const response = await fetch(url);
+      const data = await response.json();
+      this.categories = data;
+    },
+  },
+};
 </script>
 
 <template>
   <Header />
-  <Categories />
+  <Categories :categories="categories" />
 </template>
 
 <style>
