@@ -18,7 +18,7 @@ export default {
   },
 
   mounted() {
-    const response$ = fetchUsingRxJS('https://api.chucknorris.io/jokes/categoriess');
+    const response$ = fetchUsingRxJS('https://api.chucknorris.io/jokes/categories');
     response$.subscribe((data) => (this.categories = data));
   },
 };
