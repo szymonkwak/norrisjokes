@@ -12,19 +12,12 @@ export default {};
 
 <style scoped>
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
   background-color: rgba(255, 255, 255, 0.4);
-}
-@media screen and (max-width: 550px) {
-  .footer {
-    position: static;
-  }
 }
 </style>

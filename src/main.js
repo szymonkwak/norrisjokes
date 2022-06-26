@@ -11,6 +11,7 @@ const app = createApp(App);
 app.use(BalmUI, {
   $theme: {
     primary: '#222',
+    surface: '#ffe6ae',
   },
 });
 app.use(BalmUIPlus);

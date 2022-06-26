@@ -35,3 +35,11 @@ export default {
   <Categories :categories="categories" />
   <Footer />
 </template>
+
+<style scope>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+</style>
