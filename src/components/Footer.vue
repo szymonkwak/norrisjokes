@@ -2,7 +2,7 @@
   <div class="footer">
     <ui-icon> copyright </ui-icon>
     <p>2022</p>
-    <p>Szymon Kwak</p>
+    <a href="http://github.com/szymonkwak">Szymon Kwak</a>
   </div>
 </template>
 
@@ -19,5 +19,10 @@ export default {};
   align-items: center;
   gap: 4px;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>

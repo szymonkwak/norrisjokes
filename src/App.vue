@@ -1,4 +1,5 @@
 <script>
+import fetchUsingRxJS from './utils/fetchUsingRxJS';
 import Categories from './components/Categories.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
@@ -17,29 +18,21 @@ export default {
   },
 
   mounted() {
-    this.fetchCategories('https://api.chucknorris.io/jokes/categories');
-  },
-
-  methods: {
-    async fetchCategories(url) {
-      const response = await fetch(url);
-      const data = await response.json();
-      this.categories = data;
-    },
+    const response$ = fetchUsingRxJS('https://api.chucknorris.io/jokes/categoriess');
+    response$.subscribe((data) => (this.categories = data));
   },
 };
 </script>
 
 <template>
   <Header />
-  <Categories :categories="categories" />
+  <h2 v-if="categories === null">Can't fetch the data</h2>
+  <Categories v-else :categories="categories" />
   <Footer />
 </template>
 
-<style scope>
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+<style scoped>
+h2 {
+  text-align: center;
 }
 </style>
